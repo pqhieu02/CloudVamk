@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+>
+
+    <Button
+        android:id="@+id/summaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:text="Summary" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/summaryButton"
+        android:text="Enter" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@id/enterButton"
+        android:text="Update" />
+
+    <TextView
+        android:id="@+id/searchTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Meetings"
+        android:textSize="24sp"
+        android:layout_below="@id/enterButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- EditText field for meeting title -->
+    <EditText
+        android:id="@+id/searchTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meeting Title"
+        android:layout_below="@id/searchTitleTextView"
+        android:layout_marginTop="8dp"/>
+
+    <!-- DatePicker for meeting date -->
+    <DatePicker
+        android:id="@+id/searchDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:layout_below="@id/searchTitleEditText"
+        android:layout_marginTop="8dp"
+        android:datePickerMode="spinner"
+        android:spinnersShown="true" />
+
+    <!-- Button to initiate search -->
+    <Button
+        android:id="@+id/searchSubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_below="@id/searchDatePicker"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<!-- activity_update.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+>
+
+    <!-- Navigation buttons at the top -->
+
+    <Button
+        android:id="@+id/summaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:text="Summary" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/summaryButton"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@id/searchButton"
+        android:text="Enter" />
+
+    <TextView
+        android:id="@+id/updateTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Meeting"
+        android:textSize="24sp"
+        android:layout_below="@id/enterButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- EditText field for entering meeting ID -->
+    <EditText
+        android:id="@+id/meetingIdEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meeting ID"
+        android:inputType="number"
+        android:layout_below="@id/updateTitleTextView"
+        android:layout_marginTop="8dp"/>
+
+    <!-- EditText fields for updating meeting details -->
+    <EditText
+        android:id="@+id/updateTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meeting Title"
+        android:layout_below="@id/meetingIdEditText"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/updatePlaceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meeting Place"
+        android:layout_below="@id/updateTitleEditText"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/updateParticipantsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meeting Participants"
+        android:layout_below="@id/updatePlaceEditText"
+        android:layout_marginTop="8dp"/>
+
+    <DatePicker
+        android:id="@+id/updateDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:layout_below="@id/updateParticipantsEditText"
+        android:layout_marginTop="8dp"
+        android:datePickerMode="spinner"
+        android:spinnersShown="true" />
+
+    <!-- Button to update meeting -->
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Meeting"
+        android:layout_below="@id/updateDatePicker"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

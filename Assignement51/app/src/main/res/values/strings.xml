@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Assignement51</string>
+    <integer name="y_speed">100</integer>
+</resources>
