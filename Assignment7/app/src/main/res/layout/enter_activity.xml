@@ -68,24 +68,45 @@
         android:layout_below="@id/placeEditText"
         android:layout_marginTop="8dp"/>
 
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/participantsEditText"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textSize="24sp" />
+
     <Button
         android:id="@+id/timePickerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/participantsEditText"
+        android:layout_marginLeft="51dp"
         android:layout_marginTop="16dp"
-        android:layout_marginLeft="50dp"
         android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/timeTextView"
         android:text="Pick Time" />
 
-    <Button
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textSize="24sp" />
+
+        <Button
         android:id="@+id/datePickerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/participantsEditText"
-        android:layout_toRightOf="@id/timePickerButton"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="10dp"
+        android:layout_below="@id/timePickerButton"
+        android:layout_toRightOf="@id/dateTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="51dp"
         android:layout_marginRight="50dp"
         android:text="Pick Date" />
 
@@ -93,26 +114,8 @@
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:layout_below="@id/datePickerButton"
         android:text="Submit" />
-
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/participantsEditText"
-        android:layout_marginTop="8dp"
-        android:visibility="gone"
-        />
-
-    <!-- Add DatePicker widget, initially set to visibility "gone" -->
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/participantsEditText"
-        android:layout_marginTop="8dp"
-        android:visibility="gone"
-        />
 
 </RelativeLayout>

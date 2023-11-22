@@ -22,6 +22,21 @@
             </intent-filter>
         </activity>
 
+        <!-- Add SearchActivity -->
+        <activity
+            android:name=".SearchActivity"
+            android:exported="true"/>
+
+        <!-- Add UpdateActivity -->
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="true"/>
+
+        <!-- Add SummaryActivity -->
+        <activity
+            android:name=".SummaryActivity"
+            android:exported="true"/>
+
     </application>
 
 </manifest>

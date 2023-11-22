@@ -20,8 +20,8 @@
         android:id="@+id/enterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/summaryButton"
         android:text="Enter" />
 
@@ -34,7 +34,7 @@
         android:text="Update" />
 
     <TextView
-        android:id="@+id/searchTitleTextView"
+        android:id="@+id/searchTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search Meetings"
@@ -50,26 +50,65 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Meeting Title"
-        android:layout_below="@id/searchTitleTextView"
+        android:layout_below="@id/searchTitleText"
         android:layout_marginTop="8dp"/>
 
-    <!-- DatePicker for meeting date -->
-    <DatePicker
-        android:id="@+id/searchDatePicker"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:calendarViewShown="false"
         android:layout_below="@id/searchTitleEditText"
-        android:layout_marginTop="8dp"
-        android:datePickerMode="spinner"
-        android:spinnersShown="true" />
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textSize="24sp" />
 
-    <!-- Button to initiate search -->
+    <Button
+        android:id="@+id/timePickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchTitleEditText"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/timeTextView"
+        android:text="Pick Time" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/datePickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timePickerButton"
+        android:layout_toRightOf="@id/dateTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginRight="50dp"
+        android:text="Pick Date" />
+
     <Button
         android:id="@+id/searchSubmitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Search"
-        android:layout_below="@id/searchDatePicker"
+        android:layout_below="@id/datePickerButton"
         android:layout_marginTop="16dp"/>
+
+    <ListView
+        android:id="@+id/searchResultListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchSubmitButton"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"/>
+
 </RelativeLayout>

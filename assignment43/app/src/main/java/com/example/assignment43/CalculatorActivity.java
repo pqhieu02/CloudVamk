@@ -63,7 +63,6 @@ public class CalculatorActivity extends AppCompatActivity {
     }
 
     private void calculateResult() {
-        // Perform the calculation based on the current operation
         double result = 0;
         System.out.println(num1 + " " + num2 + " " + currentOperation);
         switch (currentOperation) {

@@ -106,7 +106,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void display() {
         linearEntries.removeAllViews();
-
+        if (comments.size() == 0) {
+            TextView entryTextView = new TextView(this);
+            entryTextView.setText("Not found");
+            linearEntries.addView(entryTextView);
+        }
         for (int i = 0; i < comments.size(); i++) {
             Comment entry = comments.get(i);
             TextView entryTextView = new TextView(this);

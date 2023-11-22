@@ -24,8 +24,8 @@
         android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/summaryButton"
         android:text="Search" />
 
@@ -83,23 +83,54 @@
         android:layout_below="@id/updatePlaceEditText"
         android:layout_marginTop="8dp"/>
 
-    <DatePicker
-        android:id="@+id/updateDatePicker"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:calendarViewShown="false"
         android:layout_below="@id/updateParticipantsEditText"
-        android:layout_marginTop="8dp"
-        android:datePickerMode="spinner"
-        android:spinnersShown="true" />
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textSize="24sp" />
 
-    <!-- Button to update meeting -->
+    <Button
+        android:id="@+id/timePickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateParticipantsEditText"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/timeTextView"
+        android:text="Pick Time" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/datePickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timePickerButton"
+        android:layout_toRightOf="@id/dateTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginRight="50dp"
+        android:text="Pick Date" />
+
     <Button
         android:id="@+id/updateButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Update Meeting"
-        android:layout_below="@id/updateDatePicker"
+        android:layout_below="@id/datePickerButton"
         android:layout_marginTop="16dp"/>
 
 </RelativeLayout>
